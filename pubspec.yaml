@@ -1,0 +1,13 @@
+name: playground
+description: A sample Chrome packaged application
+dependencies:
+  ace: any
+  chrome: any
+  core_elements: any
+  html5lib: any
+  paper_elements: any
+  polymer: any
+dev_dependencies:
+  path: any
+transformers:
+- chrome

@@ -1,0 +1,81 @@
+
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<link rel="import" href="../../packages/core_elements/core_icon.html">
+<link rel="import" href="../../packages/core_elements/src/core-icon/core-icon.html">
+<link rel="import" href="../../packages/core_elements/src/core-icons/core-icons.html">
+<link rel="import" href="../../packages/core_elements/src/core-icons/iconsets/av-icons.html">
+<link rel="import" href="../../packages/core_elements/src/core-icons/iconsets/hardware-icons.html">
+<link rel="import" href="../../packages/core_elements/core_overlay.html">
+<link rel="import" href="../../packages/core_elements/core_splitter.html">
+<link rel="import" href="../../packages/core_elements/core_toolbar.html">
+<link rel="import" href="../../packages/core_elements/core_tooltip.html">
+<link rel="import" href="../../packages/paper_elements/paper_button.html">
+<link rel="import" href="../../packages/paper_elements/paper_dialog.html">
+<link rel="import" href="../../packages/paper_elements/paper_dialog_transition.html">
+<link rel="import" href="../../packages/paper_elements/paper_fab.html">
+<link rel="import" href="../../packages/paper_elements/paper_icon_button.html">
+<link rel="import" href="../../packages/paper_elements/paper_item.html">
+<link rel="import" href="../../packages/paper_elements/paper_menu_button.html">
+<link rel="import" href="../../packages/paper_elements/paper_tabs.html">
+<link rel="import" href="../../packages/paper_elements/paper_toast.html">
+
+<link rel="import" href="widgets/ace_view.html">
+<link rel="import" href="widgets/files_view.html">
+
+<polymer-element name="playground-app">
+  <template>
+    <link href="playground_app.css" rel="stylesheet">
+
+    <div layout horizontal class='mainContent'>
+      <div id='navigationArea' layout vertical>
+        <core-toolbar>
+          <div flex>Toolbar</div>
+          <paper-icon-button icon="av:play-arrow" on-tap="{{handleRun}}"></paper-icon-button>
+          <paper-menu-button id="mainMenu" icon="menu" halign="left" valign="bottom">
+            <paper-item>Deploy to Mobile...</paper-item>
+            <paper-item>Send Feedback</paper-item>
+            <paper-item>About</paper-item>
+          </paper-menu-button>
+        </core-toolbar>
+        <files-view flex></files-view>
+        <core-toolbar>
+          <paper-icon-button icon="settings" on-tap="{{openSettings}}"></paper-icon-button>
+          <div flex> </div>
+          <paper-fab title="sds" icon="add" class="mini" on-tap="{{handleAdd}}"></paper-fab>
+        </core-toolbar>
+      </div>
+
+      <core-splitter direction="left" minSize="200"></core-splitter>
+
+      <div layout vertical flex>
+        <!-- div id="tabSpacer"></div -->
+        <div layout horizontal>
+          <paper-tabs selected="0" flex>
+            <paper-tab>foo.html</paper-tab>
+            <paper-tab>foo.css</paper-tab>
+            <paper-tab>foo.dart</paper-tab>
+          </paper-tabs>
+          <div id="navButtons">
+            <paper-icon-button icon="arrow-back" on-tap="{{handleBack}}"></paper-icon-button>
+            <paper-icon-button icon="arrow-forward" on-tap="{{handleForward}}"></paper-icon-button>
+          </div>
+        </div>
+        <ace-view flex></ace-view>
+      </div>
+    </div>
+
+    <paper-dialog id="okCancelDialog" heading="Place holder"
+        layered="true" backdrop="true" transition="paper-dialog-transition-center">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <paper-button label="Cancel" affirmative></paper-button>
+      <paper-button label="OK" affirmative autofocus></paper-button>
+    </paper-dialog>
+
+    <paper-toast id="toast"><paper-toast>
+  </template>
+
+  <script type="application/dart" src="playground_app.dart"></script>
+</polymer-element>
