@@ -1,0 +1,35 @@
+
+:host {
+  padding: 10px;
+  color: #888;
+  background-color: #474842;
+  overflow-y: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 2px 0 2px 0;
+}
+
+ul > ul {
+  padding-left: 1em;
+}
+
+li {
+  padding: 2px 0 2px 0;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 0;
+  right: 0;
+}
+
+li.project {
+  height: 36px;
+  font-size: 140%;
+}
+
+li:hover {
+  color: #aaa;
+}

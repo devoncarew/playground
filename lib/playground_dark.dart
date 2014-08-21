@@ -11,14 +11,14 @@ import 'nano/nano.dart';
 import 'services/jobs.dart';
 import 'services/notifier.dart';
 
-@CustomTag('playground-app')
-class PlaygroundApp extends PolymerElement {
+@CustomTag('playground-dark')
+class PlaygroundDark extends PolymerElement {
   NanoContainer nano;
 
   JobManager get jobManager => nano[JobManager];
   Notifier get notifier => nano[Notifier];
 
-  PlaygroundApp.created() : super.created();
+  PlaygroundDark.created() : super.created();
 
   void init() {
     nano = new NanoContainer();
@@ -91,7 +91,7 @@ class RunJob extends Job {
 }
 
 class UINotifier extends Notifier {
-  final PlaygroundApp app;
+  final PlaygroundDark app;
 
   UINotifier(this.app);
 

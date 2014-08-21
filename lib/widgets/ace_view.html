@@ -11,6 +11,17 @@
     <link href="ace_view.css" rel="stylesheet">
 
     <div id="container"></div>
+    <!-- ace-status line="{{lineNumber}}"></ace-status -->
+  </template>
+
+  <script type="application/dart" src="ace_view.dart"></script>
+</polymer-element>
+
+<polymer-element name="ace-status" attributes="line">
+  <template>
+    <link href="ace_status.css" rel="stylesheet">
+
+    <div class="status paper-shadow-bottom paper-shadow-bottom-z-1">{{line}}</div>
   </template>
 
   <script type="application/dart" src="ace_view.dart"></script>

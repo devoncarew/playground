@@ -6,5 +6,4 @@ class FilesView extends PolymerElement {
 
   FilesView.created() : super.created();
 
-
 }

@@ -2,8 +2,13 @@
 body {
   /*font-family: RobotoDraft, sans-serif;*/
   margin: 0;
+  background-color: #1d1e1c;
   font-family: RobotoDraft, 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2em;
+}
+
+body /deep/ paper-dialog {
+  min-width: 440px;
 }

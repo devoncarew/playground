@@ -1,0 +1,12 @@
+
+:host {
+  display: block;
+  width: 0;
+  cursor: col-resize;
+}
+
+:host(.horizontal) {
+  width: auto;
+  height: 0;
+  cursor: row-resize;
+}

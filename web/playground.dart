@@ -3,7 +3,7 @@ import 'dart:html';
 
 import 'package:polymer/polymer.dart';
 import 'package:paper_elements/paper_checkbox.dart';
-import 'package:playground/playground_app.dart';
+import 'package:playground/playground_dark.dart';
 
 void main() {
   print('Starting Polymer init...');
@@ -19,7 +19,7 @@ void main() {
 void postPolymerBoot() {
   print('Polymer init complete.');
 
-  PlaygroundApp app = document.querySelector('playground-app');
+  PlaygroundDark app = document.querySelector('playground-dark');
   app.init();
 }
 

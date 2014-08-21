@@ -11,9 +11,36 @@
   width: 240px;
 }
 
+#toolbar {
+  height: 24px;
+  padding: 10px;
+  color: #888;
+  background-color: #474842;
+}
+
+#footer {
+  height: 24px;
+  padding: 10px;
+  color: #888;
+  background-color: #474842;
+}
+
 paper-tabs {
-  background-color: #5677fc;
-  color: #fff;
+  background-color: #373832;
+  color: #ccc;
+  height: 32px;
+}
+
+paper-tabs /deep/ #selectionBar {
+  height: 0;
+}
+
+paper-tab.core-selected /deep/ #tabContainer {
+  background-color: #272822;
+}
+
+paper-tab.core-selected /deep/ .tab-content {
+  /*border-bottom: 1px solid #ccc;*/
 }
 
 core-toolbar {
@@ -43,6 +70,11 @@ paper-fab {
 paper-toast {
   left: auto;
   right: 10px;
+}
+
+core-splitter {
+  width: 0;
+  background-color: #272822;
 }
 
 #tabSpacer {
